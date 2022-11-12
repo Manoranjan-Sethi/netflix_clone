@@ -1,5 +1,4 @@
 .nav {
-  background-color: #111;
   position: fixed;
   top: 0;
   padding: 20px;
@@ -10,6 +9,10 @@
   /* Animations */
   transition-timing-function: ease-in;
   transition: all 0.5s;
+}
+
+.nav_black {
+  background-color: #111;
 }
 
 .nav_contents {
