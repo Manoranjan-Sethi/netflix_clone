@@ -30,22 +30,21 @@ function Banner() {
     <header
       className="banner"
       style={{
-        backgroundImage: `url("https://4.bp.blogspot.com/-AgxMvbuH1eg/W59f9Tts4II/AAAAAAAAABw/USypBB_MkZooZ1REGZdAVF7FysJFlzcygCLcBGAs/s1600/netflix-banner-min.png")`,
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundSize: "cover",
         backgroundPosition: "center center",
       }}
     >
       <div className="banner_contains">
-        <h1 className="banner_title">Movie Name</h1>
+        <h1 className="banner_title">
+          {movie?.title || movie?.name || movie?.original_name}
+        </h1>
         <div className="banner_buttons">
           <button className="banner_button">Play</button>
           <button className="banner_button">My List</button>
         </div>
         <h1 className="banner_description">
-          {truncate(
-            "Test Descriptio Loremip sumdo lorsitamet consectetur adipisicing elit Similique eos aliquam hic reiciendis nulla veritatis reprehenderit necessitatibus assumenda totam sint fugiat sed ad et magnam quas delectus minima animi officiis blanditiis asperiores doloreSequi reiciendis qui adipisci repellendus quod ea labore quas quo veniam quia expedita nam fuga maxime quae illum amet eius",
-            80
-          )}
+          {truncate(movie?.overview, 150)},
         </h1>
       </div>
       <div className="banner-fadeBottom" />
